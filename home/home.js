@@ -12,3 +12,4 @@ const home = document.getElementById('home');
 home.addEventListener('click', () => {
     location.replace('/');
 });
+
