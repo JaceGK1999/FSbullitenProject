@@ -37,3 +37,17 @@ export async function logout() {
     await client.auth.signOut();
     location.replace('/');
 }
+
+function checkError({ data, error }) {
+    return error ? console.error(error) : data;
+}
+
+export async function getPosts() {
+    const resp = await client.from('post_its').select('*');
+    return checkError(resp);
+}
+
+export async function createPost(post) {
+    const resp = await client.from('post_its').insert(post);
+    return checkError(resp);
+}
