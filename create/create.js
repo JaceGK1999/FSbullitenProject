@@ -8,10 +8,10 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-const home = document.getElementById('home');
-home.addEventListener('click', () => {
-    location.replace('/');
-});
+// const home = document.getElementById('home');
+// home.addEventListener('click', () => {
+//     location.replace('/');
+// });
 
 const postItForm = document.getElementById('post-it-form');
 postItForm.addEventListener('submit', async (e) => {

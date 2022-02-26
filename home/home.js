@@ -8,14 +8,14 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-const home = document.getElementById('home');
-home.addEventListener('click', () => {
-    location.replace('/');
-});
+// const home = document.getElementById('home');
+// home.addEventListener('click', () => {
+//     location.replace('/');
+// });
 
 const bulletin = document.getElementById('bulletin-board');
 
-window.addEventListener('load', async () => {  
+window.addEventListener('load', async () => {
     const posts = await getPosts();
     for (let post of posts) {
         const postDiv = renderPostIt(post);
